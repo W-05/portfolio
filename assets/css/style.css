@@ -1,0 +1,175 @@
+/* === RESET DE BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdfbff;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+/* === HEADER === */
+header {
+  background: #643e88;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header a {
+  color: #ffdee9;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffdee9;
+}
+
+/* === MAIN LAYOUT === */
+main {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #643e88;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* === TIMELINE === */
+.timeline {
+  border-left: 3px solid #643e88;
+  padding-left: 1.5rem;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item h3 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* === COMPÉTENCES / LANGUES === */
+.passions-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.passions-list li {
+  background: #eee;
+  padding: 0.8rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+/* === CARDS PROJETS === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border: 1px solid #ddd;
+  border-left: 5px solid #643e88;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #643e88;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* === CONTACT === */
+#contact a {
+  color: #643e88;
+  font-weight: bold;
+}
+
+/* === FOOTER === */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #643e88;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .passions-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
